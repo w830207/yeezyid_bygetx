@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>305240480532-qrg0k6t1m3oecj5dehoji47c077kaqo8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.305240480532-qrg0k6t1m3oecj5dehoji47c077kaqo8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyADU404aiV2eL_W16UkRpuI-Glah77hz3k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>305240480532</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.yeezyidBygetx</string>
+	<key>PROJECT_ID</key>
+	<string>yeezy-62bb5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>yeezy-62bb5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:305240480532:ios:3442bca679498489404001</string>
+</dict>
+</plist>
