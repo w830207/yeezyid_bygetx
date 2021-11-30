@@ -52,3 +52,4 @@ ios/build/
 pubspec.lock
 .DS_Store
 
+*.xml
