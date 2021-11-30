@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:get/get.dart';
 import 'package:tflite/tflite.dart';
@@ -10,8 +9,9 @@ class image_Controller extends GetxController {
   late final theimage = XFile("").path.obs;
   RxString type = ''.obs;
   RxString output = ''.obs;
-  RxString URL ='https://findicons.com/files/icons/1008/quiet/256/no.png'.obs;
-  RxString imageURL ='https://findicons.com/files/icons/1008/quiet/256/no.png'.obs;
+  RxString URL = 'https://findicons.com/files/icons/1008/quiet/256/no.png'.obs;
+  RxString imageURL =
+      'https://findicons.com/files/icons/1008/quiet/256/no.png'.obs;
   RxString HB = 'Highest Bid'.obs;
   RxString LA = 'Lowest Ask'.obs;
   RxString LS = 'Last Sale'.obs;
@@ -19,8 +19,6 @@ class image_Controller extends GetxController {
   @override
   void onInit() {
     super.onInit();
-
-
   }
 
   loadModel000() async {
@@ -35,8 +33,7 @@ class image_Controller extends GetxController {
     await Tflite.loadModel(
         model: "assets/models/quantized_" + id + ".tflite",
         labels: "assets/models/labels" + id + ".txt");
-    print(
-        "================="+id+"模型加載成功===================");
+    print("=================" + id + "模型加載成功===================");
     runModelOnImage();
   }
 
@@ -88,7 +85,6 @@ class image_Controller extends GetxController {
     theimage.value = PATHg!.path;
   }
 
-
   getData() async {
     await Firebase.initializeApp();
     var data = await FirebaseFirestore.instance
@@ -104,9 +100,4 @@ class image_Controller extends GetxController {
     LS.value = data.data()!['Last Sale'];
     HB.value = data.data()!['Highest Bid'];
   }
-
-
-
-
-
 }

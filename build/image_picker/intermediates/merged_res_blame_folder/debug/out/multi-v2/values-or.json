@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/cbw/StudioProjects/yeezyid_bygetx/build/image_picker/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml",
+            "outputFile": "/Users/wangchenbo/StudioProjects/yeezyid_bygetx/build/image_picker/intermediates/res/merged/debug/values-or/values-or.xml",
             "map": [
                 {
-                    "source": "/Users/cbw/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/res/values-or/values-or.xml",
+                    "source": "/Users/wangchenbo/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/res/values-or/values-or.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/Users/cbw/StudioProjects/yeezyid_bygetx/build/image_picker/intermediates/res/merged/debug/values-or/values-or.xml",
+            "outputFile": "/Users/wangchenbo/StudioProjects/yeezyid_bygetx/build/image_picker/intermediates/incremental/mergeDebugResources/merged.dir/values-or/values-or.xml",
             "map": [
                 {
-                    "source": "/Users/cbw/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/res/values-or/values-or.xml",
+                    "source": "/Users/wangchenbo/.gradle/caches/transforms-2/files-2.1/3c8fd1bfddb99a7a7e21faa1397acdb4/core-1.1.0/res/values-or/values-or.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

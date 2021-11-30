@@ -10,9 +10,11 @@ class putImagePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      appBar: ourAppbar(title: "確認圖片",imagePath: image_controller.theimage.value,),
+      appBar: ourAppbar(
+        title: "確認圖片",
+        imagePath: image_controller.theimage.value,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,14 +30,18 @@ class putImagePage extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            ourButton(onPressed: (){
-              image_controller.loadModel000();
-              Get.offAllNamed("/home/useCamera/answer");
-            }, child: Text("開始辨識")),
-            ourButton(onPressed: (){
-              image_controller.theimage.value='';
-              Get.offAllNamed("/home");
-            }, child: Text("重新選圖")),
+            ourButton(
+                onPressed: () {
+                  image_controller.loadModel000();
+                  Get.toNamed("/home/useCamera/answer");
+                },
+                child: Text("開始辨識")),
+            ourButton(
+                onPressed: () {
+                  image_controller.theimage.value = '';
+                  Get.toNamed("/home");
+                },
+                child: Text("重新選圖")),
           ],
         ),
       ),

@@ -8,11 +8,13 @@ import 'package:yeezyid_bygetx/app/widget/ourCard.dart';
 
 class answerPage extends StatelessWidget {
   image_Controller image_controller = Get.put(image_Controller());
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: ourAppbar(title: "辨識結果",imagePath: image_controller.theimage.value,),
+      appBar: ourAppbar(
+        title: "辨識結果",
+        imagePath: image_controller.theimage.value,
+      ),
       body: Center(
           child: Obx(
         () => Column(
@@ -25,10 +27,12 @@ class answerPage extends StatelessWidget {
                 HB: image_controller.HB.value,
                 LA: image_controller.LA.value,
                 LS: image_controller.LS.value),
-            ourButton(onPressed: (){
-              image_controller.theimage.value='';
-              Get.offAllNamed("/home");
-            }, child: Text("重新選圖")),
+            ourButton(
+                onPressed: () {
+                  image_controller.theimage.value = '';
+                  Get.offAllNamed("/home");
+                },
+                child: Text("重新選圖")),
           ],
         ),
       )),
