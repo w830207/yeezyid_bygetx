@@ -16,11 +16,6 @@ class ImageController extends GetxController {
   RxString LA = 'Lowest Ask'.obs;
   RxString LS = 'Last Sale'.obs;
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
   loadModel000() async {
     await Tflite.loadModel(
         model: "assets/models/quantized_000.tflite",

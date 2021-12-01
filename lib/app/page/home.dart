@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:yeezyid_bygetx/app/controller/image_Controller.dart';
 import 'package:yeezyid_bygetx/app/widget/ourAppbar.dart';
 import 'package:yeezyid_bygetx/app/widget/ourButton.dart';
+import 'package:sentry/sentry.dart';
 
 class HomePage extends StatelessWidget {
   final ImageController imageController = Get.find();
