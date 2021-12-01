@@ -7,7 +7,7 @@ import 'package:yeezyid_bygetx/app/widget/ourButton.dart';
 import 'package:yeezyid_bygetx/app/widget/ourCard.dart';
 
 class answerPage extends StatelessWidget {
-  image_Controller image_controller = Get.put(image_Controller());
+  image_Controller image_controller = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -6,7 +6,7 @@ import 'package:yeezyid_bygetx/app/widget/ourAppbar.dart';
 import 'package:yeezyid_bygetx/app/widget/ourButton.dart';
 
 class putImagePage extends StatelessWidget {
-  image_Controller image_controller = Get.put(image_Controller());
+  image_Controller image_controller = Get.find();
 
   @override
   Widget build(BuildContext context) {

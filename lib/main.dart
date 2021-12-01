@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:yeezyid_bygetx/app/routes/app_pages.dart';
 
+import 'app/controller/image_Controller.dart';
+
 void main() {
+  Get.put(image_Controller());
   runApp(const MyApp());
 }
 
