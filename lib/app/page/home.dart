@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             OurButton(
-              minWidth: MediaQuery.of(context).size.width / 2,
+              width: MediaQuery.of(context).size.width / 2,
               child: Text("gallery"),
               onPressed: () {
                 imageController.openGallery();
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
               },
             ),
             OurButton(
-              minWidth: MediaQuery.of(context).size.width / 2,
+              width: MediaQuery.of(context).size.width / 2,
               child: Text("camera"),
               onPressed: () {
                 imageController.openCamera();

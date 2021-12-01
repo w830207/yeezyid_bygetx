@@ -9,7 +9,7 @@ class OurButton extends StatelessWidget {
     required this.child,
     this.color = kPrimaryColor,
     this.textColor = Colors.white,
-    this.minWidth,
+    this.width,
   }) : super(key: key);
 
   final ShapeBorder? shape;
@@ -17,19 +17,25 @@ class OurButton extends StatelessWidget {
   final Color color;
   final Widget child;
   final Color? textColor;
-  final double? minWidth;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+    return SizedBox(
+      width: this.width,
+      child: ElevatedButton(
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.all(this.textColor),
+          backgroundColor: MaterialStateProperty.all(this.color),
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+        ),
+        onPressed: this.onPressed,
+        child: this.child,
       ),
-      color: this.color,
-      onPressed: this.onPressed,
-      child: this.child,
-      textColor: this.textColor,
-      minWidth: this.minWidth,
     );
   }
 }
