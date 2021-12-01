@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class ourCard extends StatelessWidget {
-  ourCard({
+class OurCard extends StatelessWidget {
+  OurCard({
     Key? key,
     required this.type,
     required this.output,
     required this.imageURL,
-    required this.URL,
+    required this.url,
     required this.HB,
     required this.LA,
     required this.LS,
@@ -16,7 +15,7 @@ class ourCard extends StatelessWidget {
 
   final String type;
   final String output;
-  final String URL;
+  final String url;
   final String imageURL;
   final String HB;
   final String LA;
@@ -26,7 +25,7 @@ class ourCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        await launch(this.URL);
+        await launch(this.url);
       },
       child: Card(
         child: Column(

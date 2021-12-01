@@ -11,17 +11,12 @@ class AppPages {
   static final routes = [
     GetPage(
       name: AppRoutes.Home,
-      page: () => home(),
+      page: () => HomePage(),
       children: [
         GetPage(
           name: AppRoutes.Camera,
-          page: () => putImagePage(),
-          children: [
-            GetPage(
-                name: AppRoutes.Answer,
-                page: () => answerPage()
-            )
-          ],
+          page: () => PutImagePage(),
+          children: [GetPage(name: AppRoutes.Answer, page: () => AnswerPage())],
         )
       ],
     ),

@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:yeezyid_bygetx/app/core/colors.dart';
 
-class ourButton extends StatelessWidget {
-  ourButton({
+class OurButton extends StatelessWidget {
+  OurButton({
     Key? key,
     this.shape,
     required this.onPressed,
@@ -13,12 +12,12 @@ class ourButton extends StatelessWidget {
     this.minWidth,
   }) : super(key: key);
 
-  ShapeBorder? shape;
+  final ShapeBorder? shape;
   final void Function()? onPressed;
   final Color color;
   final Widget child;
-  Color? textColor;
-  double? minWidth;
+  final Color? textColor;
+  final double? minWidth;
 
   @override
   Widget build(BuildContext context) {

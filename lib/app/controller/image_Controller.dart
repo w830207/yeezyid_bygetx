@@ -4,12 +4,12 @@ import 'package:image_picker/image_picker.dart';
 import 'package:get/get.dart';
 import 'package:tflite/tflite.dart';
 
-class image_Controller extends GetxController {
+class ImageController extends GetxController {
   final ImagePicker _picker = ImagePicker();
-  late final theimage = XFile("").path.obs;
+  late final theImage = XFile("").path.obs;
   RxString type = ''.obs;
   RxString output = ''.obs;
-  RxString URL = 'https://findicons.com/files/icons/1008/quiet/256/no.png'.obs;
+  RxString url = 'https://findicons.com/files/icons/1008/quiet/256/no.png'.obs;
   RxString imageURL =
       'https://findicons.com/files/icons/1008/quiet/256/no.png'.obs;
   RxString HB = 'Highest Bid'.obs;
@@ -53,7 +53,7 @@ class image_Controller extends GetxController {
       'QNTM'
     ];
     var res = await Tflite.runModelOnImage(
-      path: theimage.value,
+      path: theImage.value,
       imageMean: 0.0,
       // defaults to 117.0
       imageStd: 255.0,
@@ -72,17 +72,16 @@ class image_Controller extends GetxController {
       print("=================得到配色了 接下來getData()===================");
       getData();
     }
-    ;
   }
 
   openCamera() async {
-    var PATHc = (await _picker.pickImage(source: ImageSource.camera));
-    theimage.value = PATHc!.path;
+    var pathC = (await _picker.pickImage(source: ImageSource.camera));
+    theImage.value = pathC!.path;
   }
 
   openGallery() async {
-    var PATHg = (await _picker.pickImage(source: ImageSource.gallery));
-    theimage.value = PATHg!.path;
+    var pathG = (await _picker.pickImage(source: ImageSource.gallery));
+    theImage.value = pathG!.path;
   }
 
   getData() async {
@@ -94,7 +93,7 @@ class image_Controller extends GetxController {
 
     print('=================從firestore拿到資料===================');
 
-    URL.value = data.data()!['URL'];
+    url.value = data.data()!['URL'];
     imageURL.value = data.data()!['IMAGE URL'];
     LA.value = data.data()!['Lowest Ask'];
     LS.value = data.data()!['Last Sale'];

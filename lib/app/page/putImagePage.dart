@@ -5,15 +5,15 @@ import 'package:yeezyid_bygetx/app/controller/image_Controller.dart';
 import 'package:yeezyid_bygetx/app/widget/ourAppbar.dart';
 import 'package:yeezyid_bygetx/app/widget/ourButton.dart';
 
-class putImagePage extends StatelessWidget {
-  image_Controller image_controller = Get.find();
+class PutImagePage extends StatelessWidget {
+  final ImageController imageController = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: ourAppbar(
+      appBar: OurAppbar(
         title: "確認圖片",
-        imagePath: image_controller.theimage.value,
+        imagePath: imageController.theImage.value,
       ),
       body: Center(
         child: Column(
@@ -24,21 +24,21 @@ class putImagePage extends StatelessWidget {
               height: MediaQuery.of(context).size.width / 2,
               width: MediaQuery.of(context).size.width / 2,
               child: FittedBox(
-                child: Obx(() => image_controller.theimage.value == ''
+                child: Obx(() => imageController.theImage.value == ''
                     ? Text('no image here!')
-                    : Image.file(File(image_controller.theimage.value))),
+                    : Image.file(File(imageController.theImage.value))),
                 fit: BoxFit.contain,
               ),
             ),
-            ourButton(
+            OurButton(
                 onPressed: () {
-                  image_controller.loadModel000();
+                  imageController.loadModel000();
                   Get.toNamed("/home/useCamera/answer");
                 },
                 child: Text("開始辨識")),
-            ourButton(
+            OurButton(
                 onPressed: () {
-                  image_controller.theimage.value = '';
+                  imageController.theImage.value = '';
                   Get.toNamed("/home");
                 },
                 child: Text("重新選圖")),

@@ -4,13 +4,13 @@ import 'package:yeezyid_bygetx/app/controller/image_Controller.dart';
 import 'package:yeezyid_bygetx/app/widget/ourAppbar.dart';
 import 'package:yeezyid_bygetx/app/widget/ourButton.dart';
 
-class home extends StatelessWidget {
-  final image_Controller image_controller = Get.find();
+class HomePage extends StatelessWidget {
+  final ImageController imageController = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: ourAppbar(
+      appBar: OurAppbar(
         title: "選擇圖片",
         imagePath: '',
       ),
@@ -18,19 +18,19 @@ class home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ourButton(
+            OurButton(
               minWidth: MediaQuery.of(context).size.width / 2,
               child: Text("gallery"),
               onPressed: () {
-                image_controller.openGallery();
+                imageController.openGallery();
                 Get.toNamed("/home/useCamera");
               },
             ),
-            ourButton(
+            OurButton(
               minWidth: MediaQuery.of(context).size.width / 2,
               child: Text("camera"),
               onPressed: () {
-                image_controller.openCamera();
+                imageController.openCamera();
                 Get.toNamed("/home/useCamera");
               },
             ),
