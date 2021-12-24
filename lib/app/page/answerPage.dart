@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:yeezyid_bygetx/app/controller/image_Controller.dart';
+import 'package:yeezyid_bygetx/app/controller/controller.dart';
 import 'package:yeezyid_bygetx/app/widget/ourAppbar.dart';
 import 'package:yeezyid_bygetx/app/widget/ourButton.dart';
 import 'package:yeezyid_bygetx/app/widget/ourCard.dart';
 
 class AnswerPage extends StatelessWidget {
-  final ImageController imageController = Get.find();
+  final Controller imageController = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:yeezyid_bygetx/app/routes/app_pages.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
-import 'app/controller/image_Controller.dart';
+import 'app/controller/controller.dart';
 
 void main() {
   SentryFlutter.init(
@@ -12,7 +12,7 @@ void main() {
       options.tracesSampleRate = 1.0;
     },
     appRunner: () {
-      Get.put(ImageController());
+      Get.put(Controller());
       runApp(const MyApp());
     },
   );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yeezyid_bygetx/app/core/colors.dart';
+import 'package:yeezyid_bygetx/app/core/constants.dart';
 
 class OurButton extends StatelessWidget {
   OurButton({

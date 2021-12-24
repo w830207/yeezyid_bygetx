@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:yeezyid_bygetx/app/core/colors.dart';
+import 'package:yeezyid_bygetx/app/core/constants.dart';
 
 class OurAppbar extends StatelessWidget with PreferredSizeWidget {
   OurAppbar({Key? key, required this.title, required this.imagePath})
@@ -15,9 +15,11 @@ class OurAppbar extends StatelessWidget with PreferredSizeWidget {
       automaticallyImplyLeading: false,
       backgroundColor: kPrimaryColor,
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(50),
-              bottomRight: Radius.circular(50))),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(50),
+          bottomRight: Radius.circular(50),
+        ),
+      ),
       flexibleSpace: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

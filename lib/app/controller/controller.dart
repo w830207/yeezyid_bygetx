@@ -4,7 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:get/get.dart';
 import 'package:tflite/tflite.dart';
 
-class ImageController extends GetxController {
+class Controller extends GetxController {
   final ImagePicker _picker = ImagePicker();
   late final theImage = XFile("").path.obs;
   RxString type = ''.obs;
@@ -16,6 +16,7 @@ class ImageController extends GetxController {
   RxString lowestAsk = 'Lowest Ask'.obs;
   RxString lastSale = 'Last Sale'.obs;
 
+  ///加載型號模型
   loadModel000() async {
     await Tflite.loadModel(
         model: "assets/models/quantized_000.tflite",
@@ -24,6 +25,7 @@ class ImageController extends GetxController {
     runModelOnImage();
   }
 
+  ///加載配色模型
   loadModelother(String id) async {
     await Tflite.loadModel(
         model: "assets/models/quantized_" + id + ".tflite",
@@ -32,6 +34,7 @@ class ImageController extends GetxController {
     runModelOnImage();
   }
 
+  ///辨識
   runModelOnImage() async {
     var slist = [
       '350',
@@ -64,16 +67,18 @@ class ImageController extends GetxController {
       loadModelother(type.value);
     } else {
       output.value = res[0]['label'];
-      print("=================得到配色了 接下來getData()===================");
+      print("=================得到配色了 接下來雲端取資料===================");
       getData();
     }
   }
 
+  ///使用相機
   openCamera() async {
     var pathC = (await _picker.pickImage(source: ImageSource.camera));
     theImage.value = pathC!.path;
   }
 
+  ///使用相冊
   openGallery() async {
     var pathG = (await _picker.pickImage(source: ImageSource.gallery));
     theImage.value = pathG!.path;
@@ -86,7 +91,7 @@ class ImageController extends GetxController {
         .doc(output.value)
         .get();
 
-    print('=================從firestore拿到資料===================');
+    print('=================從FireStore拿到資料===================');
 
     url.value = data.data()!['URL'];
     imageURL.value = data.data()!['IMAGE URL'];
