@@ -23,12 +23,21 @@ class AnswerPage extends StatelessWidget {
                 output: imageController.output.value,
                 imageURL: imageController.imageURL.value,
                 url: imageController.url.value,
-                HB: imageController.HB.value,
-                LA: imageController.LA.value,
-                LS: imageController.LS.value),
+                highestBid: imageController.highestBid.value,
+                lowestAsk: imageController.lowestAsk.value,
+                lastSale: imageController.lastSale.value),
             OurButton(
                 onPressed: () {
                   imageController.theImage.value = '';
+                  imageController.type.value = '';
+                  imageController.output.value = '';
+                  imageController.imageURL.value =
+                      'https://findicons.com/files/icons/1008/quiet/256/no.png';
+                  imageController.url.value =
+                      'https://findicons.com/files/icons/1008/quiet/256/no.png';
+                  imageController.highestBid.value = 'Highest Bid';
+                  imageController.lowestAsk.value = 'Lowest Ask';
+                  imageController.lastSale.value = 'Last Sale';
                   Get.offAllNamed("/home");
                 },
                 child: Text("重新選圖")),

@@ -12,9 +12,9 @@ class ImageController extends GetxController {
   RxString url = 'https://findicons.com/files/icons/1008/quiet/256/no.png'.obs;
   RxString imageURL =
       'https://findicons.com/files/icons/1008/quiet/256/no.png'.obs;
-  RxString HB = 'Highest Bid'.obs;
-  RxString LA = 'Lowest Ask'.obs;
-  RxString LS = 'Last Sale'.obs;
+  RxString highestBid = 'Highest Bid'.obs;
+  RxString lowestAsk = 'Lowest Ask'.obs;
+  RxString lastSale = 'Last Sale'.obs;
 
   loadModel000() async {
     await Tflite.loadModel(
@@ -90,8 +90,8 @@ class ImageController extends GetxController {
 
     url.value = data.data()!['URL'];
     imageURL.value = data.data()!['IMAGE URL'];
-    LA.value = data.data()!['Lowest Ask'];
-    LS.value = data.data()!['Last Sale'];
-    HB.value = data.data()!['Highest Bid'];
+    lowestAsk.value = data.data()!['Lowest Ask'];
+    lastSale.value = data.data()!['Last Sale'];
+    highestBid.value = data.data()!['Highest Bid'];
   }
 }

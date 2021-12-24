@@ -8,18 +8,18 @@ class OurCard extends StatelessWidget {
     required this.output,
     required this.imageURL,
     required this.url,
-    required this.HB,
-    required this.LA,
-    required this.LS,
+    required this.highestBid,
+    required this.lowestAsk,
+    required this.lastSale,
   }) : super(key: key);
 
   final String type;
   final String output;
   final String url;
   final String imageURL;
-  final String HB;
-  final String LA;
-  final String LS;
+  final String highestBid;
+  final String lowestAsk;
+  final String lastSale;
 
   @override
   Widget build(BuildContext context) {
@@ -50,11 +50,11 @@ class OurCard extends StatelessWidget {
                     SizedBox(height: 8.0), //兩排文字間距用透明的box隔開
                     Text('配色：' + this.output),
                     SizedBox(height: 8.0), //兩排文字間距用透明的box隔開
-                    Text('最高買價：' + this.HB),
+                    Text('最高買價：' + this.highestBid),
                     SizedBox(height: 8.0), //兩排文字間距用透明的box隔開
-                    Text('最低售價：' + this.LA),
+                    Text('最低售價：' + this.lowestAsk),
                     SizedBox(height: 8.0), //兩排文字間距用透明的box隔開
-                    Text('上次成交價：' + this.LS),
+                    Text('上次成交價：' + this.lastSale),
                   ],
                 ),
               ),
